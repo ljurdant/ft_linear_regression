@@ -6,13 +6,15 @@ import json
 import matplotlib.pyplot as plt
 from LinearRegression import LinearRegression
 
-data = pd.read_csv("datasets/data.csv")
-x = np.array(data["km"])
-y = np.array(data["price"])
 
-lr = LinearRegression()
-thetas = lr.train(x, y)
+if __name__ == "__main__":
+    data = pd.read_csv("datasets/data.csv")
+    x = np.array(data["km"])
+    y = np.array(data["price"])
 
-print("Thetas:", thetas)
+    lr = LinearRegression()
+    thetas = lr.train(x, y)
 
-json.dump(thetas.tolist(), open("thetas.json", "w"))
+    print("Thetas:", thetas)
+
+    json.dump(thetas.tolist(), open("thetas.json", "w"))
