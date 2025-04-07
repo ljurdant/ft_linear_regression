@@ -1,5 +1,4 @@
-#!/home/ljurdant/.venv/ft_linear_regression/bin/python3
-
+#!/usr/bin/env python3
 
 import json
 import numpy as np
